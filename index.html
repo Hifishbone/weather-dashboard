@@ -17,7 +17,7 @@
 </head>
 
 <body>
-  <header class="bg-primary text-white">
+  <header class="bg-primary bg-gradient text-white">
     <h1 class="py-3 text-center fw-bold">
       Weather Dashboard
     </h1>
@@ -25,55 +25,61 @@
 
   <main>
 
-      <div class="row">
-        <div class="search col-3 m-2">
-          <h2 class="fw-bold">Search for a City:</h2>
-          <input type="text" class="form-control" placeholder="City Name">
-          <button type="button" class="btn btn-primary my-3 w-100">Search</button>
-          <div class="border-bottom border-dark border-2"></div>
-          <div class="search-history">
-            <!-- <button type="button" class="btn btn-primary mt-3 w-100">Search</button>
-            <button type="button" class="btn btn-primary mt-3 w-100">Search</button> -->
+    <div class="row mx-1">
+      <div class="search col-3 my-2">
+        <div class="card">
+          <h2 class="card-header">Search for a City:</h2>
+          <form id="city-form" class="card-body">
+            <input name="city-name" id="city-name" type="text" autofocus="true" class="w-100 form-input p-2"
+              placeholder="City Name" />
+            <button type="submit" class="btn btn-primary mt-3 w-100">Search</button>
+          </form>
+        </div>
+        <div class="card search-history mt-3">
+          <h3 class="card-header">Search History:</h3>
+          <div class="card-body">
+            <button type="button" class="btn btn-secondary my-2 w-100">Search</button>
+            <button type="button" class="btn btn-secondary my-2 w-100">Search</button>
           </div>
         </div>
-        <div class="results col m-2">
-          
-          <section class="today-info-box border border-dark border-1">
-            <div class="row">
-              <div class="col-auto m-2 fs-3 fw-bold city-date">Atlanta (3/30/2021)</div>
-              <span class="col-auto my-2 p-0 weather-icon">SUNNY</span>
-            </div>
-            <div class="row">
-              <div class="col-auto m-2">Temp:</div>
-              <span class="col-auto my-2 p-0 temp">74.01</span>
-            </div>
-            <div class="row">
-              <div class="col-auto m-2">Wind:</div>
-              <span class="col-auto my-2 p-0 wind">6.67</span>
-            </div>
-            <div class="row">
-              <div class="col-auto m-2">Humidity:</div>
-              <span class="col-auto my-2 p-0 humidity">46%</span>
-            </div>
-            <div class="row">
-              <div class="col-auto m-2">UV Index:</div>
-              <span class="col-auto my-2 p-0 uv">0.47</span>
-            </div>
-          </section>
-
-          <section class="five-day-info">
-            <p class="m-2 fs-4 fw-bold city-date">5-Day Forecast:</p>
-            <div class="row">
-              <div class="col">111</div>
-              <div class="col">222</div>
-              <div class="col">333</div>
-              <div class="col">444</div>
-              <div class="col">555</div>
-            </div>
-          </section>
-
-        </div>
       </div>
+
+      <div class="results col my-2">
+        <section class="card today-info-box">
+          <div class="card-header d-flex align-items-center bg-white">
+              <span class="text-capitalize fs-3 fw-bold" id="city-date">Atlanta (3/30/2021)</span>
+              <img class="mx-2" src="./assets/images/temp.png" alt="temp" id="weather-icon">
+          </div>
+          <div class="card-body">
+            <div class="mx-1">
+              <span>Temp: </span> <span id="cur-temp">1111</span>
+            </div>
+            <div class="mx-1 my-3">
+              Wind: <span id="cur-wind"></span>
+            </div>
+            <div class="mx-1 my-3">
+              Humidity: <span id="cur-humidity"></span>
+            </div>
+            <div class="mx-1">
+             UV Index: <span class="rounded px-3 py-1 text-white" id="cur-uv"></span>
+            </div>
+          </div>
+        </section>
+
+        <section class="five-day-info">
+          <p class="m-2 fs-4 fw-bold city-date">5-Day Forecast:</p>
+          <div class="row">
+            <div class="col">111</div>
+            <div class="col">222</div>
+            <div class="col">333</div>
+            <div class="col">444</div>
+            <div class="col">555</div>
+          </div>
+          <div class="row show-context"></div>
+        </section>
+
+      </div>
+    </div>
 
 
   </main>
@@ -81,6 +87,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="./assets/js/script.js"></script>
 </body>
