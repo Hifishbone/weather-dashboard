@@ -1,3 +1,8 @@
 #weather-icon {
     max-height: 42px;
 }
+
+.five-day-card {
+    background-color:skyblue;
+    color:white;
+}

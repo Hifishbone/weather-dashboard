@@ -45,10 +45,10 @@
       <div class="results col my-2">
         <section class="card today-info-box">
           <div class="card-header d-flex align-items-center bg-white">
-              <span class="text-capitalize fs-3 fw-bold" id="city-date">Unkown City (Unkown Date)</span>
-              <img class="mx-2" src="" alt="" id="weather-icon">
+            <span class="text-capitalize fs-3 fw-bold" id="city-date">Unkown City (Unkown Date)</span>
+            <img class="mx-2" src="" alt="" id="weather-icon">
           </div>
-          <div class="card-body">
+          <div class="card-body" style="font-size: larger;">
             <div class="mx-1">
               <span>Temp: </span> <span id="cur-temp"></span>
             </div>
@@ -59,19 +59,14 @@
               Humidity: <span id="cur-humidity"></span>
             </div>
             <div class="mx-1">
-             UV Index: <span class="rounded px-3 py-1 text-white" id="cur-uv"></span>
+              UV Index: <span class="rounded px-3 py-1 text-white" id="cur-uv"></span>
             </div>
           </div>
         </section>
 
         <section class="five-day-info">
           <p class="m-2 fs-4 fw-bold city-date">5-Day Forecast:</p>
-          <div class="row">
-            <div class="col">111</div>
-            <div class="col">222</div>
-            <div class="col">333</div>
-            <div class="col">444</div>
-            <div class="col">555</div>
+          <div class="row row-cols-xs-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5" id="five-days">
           </div>
           <div class="row show-context"></div>
         </section>
