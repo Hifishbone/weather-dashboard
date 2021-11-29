@@ -9,7 +9,7 @@ A simple website to see the weather outlook for multiple cities
 * JS
 * JQuery
 * Bootstrap
-* Server-Side APIs: One Call API
+* Server-Side APIs: Open Weather API
 
 ## Website
 https://hifishbone.github.io/weather-dashboard/
