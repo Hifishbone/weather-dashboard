@@ -6,3 +6,8 @@
     background-color:skyblue;
     color:white;
 }
+
+
+.search {
+    min-width: fit-content;
+}

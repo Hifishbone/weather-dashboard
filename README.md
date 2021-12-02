@@ -8,6 +8,7 @@ A simple website to see the weather outlook for multiple cities
 * CSS
 * JS
 * JQuery
+* Moment.js
 * Bootstrap
 * Server-Side APIs: One Call API
 
